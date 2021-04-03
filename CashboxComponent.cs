@@ -19,7 +19,6 @@ namespace CashboxComponent
         const string TicketRequest = Component.Passenger + Component.Cashbox;
         const string Ticket = Component.Passenger + Component.Cashbox;
         const string RefundRequest = Component.Passenger + Component.Cashbox;
-
         const string RefundResponse = Component.Passenger + Component.Cashbox;
         //const string CashboxToRegistrationQueue = Component.Cashbox + Component.Registration;
         //const string CashboxToLogsQueue = Component.Cashbox + Component.Logs;
@@ -89,7 +88,7 @@ namespace CashboxComponent
                 }
             });
 
-            mqClient.SubscribeTo<TicketRequest>(PassengerToCashboxQueue, mes =>
+            mqClient.SubscribeTo<TicketRequest>(TicketRequest, mes =>
             {
                 try
                 {
